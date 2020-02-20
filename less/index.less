@@ -57,7 +57,7 @@ html, body {
 	height: 100%;
 }
 
-
+// MY WORK STARTS HERE -----------------------------
 
 .flex-mixin(@direction, @wrap, @spacing) {
 	display: flex;
@@ -66,14 +66,14 @@ html, body {
 	align-items: center;
 }
 
-@buttoncolor: pink;
+@buttoncolor: fuchsia;
 
 
 .main-container {
 
 		display: flex;
 		flex-direction: column;
-		background-color: pink;
+		background-color: black;
 
 		header {
 			.flex-mixin(column, nowrap, space-around);
@@ -94,16 +94,19 @@ html, body {
 				h1 {
 					font-weight: bold;
 					font-size: 2rem;
+					color: fuchsia;
 				}
 
 				h2 {
 					font-weight: bold;
+					color: fuchsia;
 				}
 
 			nav button {
 				background-color: @buttoncolor;
-				border: 2px solid black;
+				border: 2px solid;
 				border-radius: 5px;
+				font-weight: bold;
 			}
 		}
 
@@ -132,85 +135,94 @@ html, body {
 
 		.left-content {
 
-			border: 5px solid green;
-			background-color: gray;
-			margin: 5px;
+			border: 1px dotted fuchsia;
 			padding: 5px;
+			margin: 10px;
+			color: @buttoncolor;
+
+				.next-sec {
+					margin-top: 25px;
+					padding-top: 5px;
+					
+				}
 
 				h3 {
 					font-weight: bold;
 					font-size: 20px;
-					.flex-mixin(row, nowrap, space-around)
+					.flex-mixin(row, nowrap, space-around);
 				}
 
+				.prof-sum {
+			
+					text-align: center;
+				}
+
+
 			.jobs {
-				border: 5px solid black;
-				background-color: red;
-				margin: 10px;
+				margin-bottom: 10px;
+				margin-left: 10px;
+				margin-right: 10px;
 				width: 98%;
+
 				.flex-mixin(row, wrap, space-around);
 
 					div {
+						padding: 15px;
 						margin: 25px 0;
 						width: 48%;
-						height: 30rem;
+						height: 20rem;
 
 						h4 {
 							font-weight: bold;
 							font-size: 2rem;
+							.flex-mixin(row, nowrap, space-around);
+							padding: 10px;
+							line-height: 2;
 						}
 					}
 
 			}
 		}
 
+		
+		.right-content {
+			border: 2px dotted fuchsia;
+			margin: 5px;
+			padding: 5px;
+			color: @buttoncolor;
+
+
+				h3 {
+					font-weight: bold;
+					font-size: 20px;
+					.flex-mixin(row, nowrap, center);
+					margin: 10px;
+				}
+
+				.car-sum {
+					text-align: center;
+					margin: 10px;
+					padding-bottom: 10px;
+				}
+
+				h4 {
+					font-weight: bold;
+					font-size: 20px;
+					color: @buttoncolor;
+					margin: 10px;
+				}
+
+				address {
+					margin: 15px;
+					text-align: center;
+					line-height: 2;
+				}
+
+				.skills {
+					text-align: center;
+				}
+
+
+		}
+
 }
-
-
-
-
-
-
-
-
-// @primarycolor: blue;
-// @banana: red;
-
-// .background-mixin() {
-// 	background-color: red;
-// 	color: green;
-// }
-
-// .flex(@direction, @wrap, @spacing) {
-// 	display: flex;
-// 	flex-flow: @direction @wrap;
-// 	justify-content: @spacing;
-// 	align-items: center;
-// }
-
-// .main-container {
-
-
-// 	.left-content {
-		
-
-// 		.jobs {
-// 			background-color: @primarycolor;
-// 			width: 100%;
-// 			.flex(row, wrap, space-around);
-		
-// 				div {
-// 					.background-mixin();
-// 					margin: 25px 0;
-// 					width: 48%;
-// 					height: 30rem;
-		
-// 						h4 {
-// 							font-weight: bold;
-// 							font-size: 2rem;
-// 							color: @primarycolor;
-// 						}
-// 				}
-// 		}
-// 	}
-// }
