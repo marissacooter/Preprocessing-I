@@ -134,3 +134,89 @@ html,
 body {
   height: 100%;
 }
+.main-container {
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+}
+.main-container header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid black;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+}
+.main-container header .header-txt {
+  width: 40%;
+  margin: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main-container header h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.main-container header h2 {
+  font-weight: bold;
+}
+.main-container header nav button {
+  background-color: pink;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.main-container header .header-img {
+  width: 98%;
+  height: 10rem;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container header .header-img img {
+  width: 100%;
+  object-fit: cover;
+  height: 10rem;
+}
+@media (max-width: 800px) {
+  .main-container header .header-img img {
+    width: 50%;
+  }
+}
+.main-container .left-content {
+  border: 5px solid green;
+  background-color: gray;
+  margin: 5px;
+  padding: 5px;
+}
+.main-container .left-content h3 {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.main-container .left-content .jobs {
+  border: 5px solid black;
+  background-color: red;
+  margin: 10px;
+  width: 98%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.main-container .left-content .jobs div {
+  margin: 25px 0;
+  width: 48%;
+  height: 30rem;
+}
+.main-container .left-content .jobs div h4 {
+  font-weight: bold;
+  font-size: 2rem;
+}

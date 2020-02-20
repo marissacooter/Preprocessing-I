@@ -57,3 +57,160 @@ html, body {
 	height: 100%;
 }
 
+
+
+.flex-mixin(@direction, @wrap, @spacing) {
+	display: flex;
+	flex-flow: @direction @wrap;
+	justify-content: @spacing;
+	align-items: center;
+}
+
+@buttoncolor: pink;
+
+
+.main-container {
+
+		display: flex;
+		flex-direction: column;
+		background-color: pink;
+
+		header {
+			.flex-mixin(column, nowrap, space-around);
+			border-bottom: 2px solid black;
+			margin-left: 5px;
+			margin-right: 5px;
+			padding: 5px;
+
+			.header-txt {
+
+				width: 40%;
+
+				margin: 5px;
+
+				.flex-mixin(column, nowrap, center);
+			}
+
+				h1 {
+					font-weight: bold;
+					font-size: 2rem;
+				}
+
+				h2 {
+					font-weight: bold;
+				}
+
+			nav button {
+				background-color: @buttoncolor;
+				border: 2px solid black;
+				border-radius: 5px;
+			}
+		}
+
+
+		 header .header-img {
+			width: 98%;
+			height: 10rem;
+			margin: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+
+				img {
+					width: 100%;
+					object-fit: cover;
+					height: 10rem;
+
+						@media(max-width: 800px) {
+							width: 50%;
+						}
+				}
+
+		}
+
+
+		.left-content {
+
+			border: 5px solid green;
+			background-color: gray;
+			margin: 5px;
+			padding: 5px;
+
+				h3 {
+					font-weight: bold;
+					font-size: 20px;
+					.flex-mixin(row, nowrap, space-around)
+				}
+
+			.jobs {
+				border: 5px solid black;
+				background-color: red;
+				margin: 10px;
+				width: 98%;
+				.flex-mixin(row, wrap, space-around);
+
+					div {
+						margin: 25px 0;
+						width: 48%;
+						height: 30rem;
+
+						h4 {
+							font-weight: bold;
+							font-size: 2rem;
+						}
+					}
+
+			}
+		}
+
+}
+
+
+
+
+
+
+
+
+// @primarycolor: blue;
+// @banana: red;
+
+// .background-mixin() {
+// 	background-color: red;
+// 	color: green;
+// }
+
+// .flex(@direction, @wrap, @spacing) {
+// 	display: flex;
+// 	flex-flow: @direction @wrap;
+// 	justify-content: @spacing;
+// 	align-items: center;
+// }
+
+// .main-container {
+
+
+// 	.left-content {
+		
+
+// 		.jobs {
+// 			background-color: @primarycolor;
+// 			width: 100%;
+// 			.flex(row, wrap, space-around);
+		
+// 				div {
+// 					.background-mixin();
+// 					margin: 25px 0;
+// 					width: 48%;
+// 					height: 30rem;
+		
+// 						h4 {
+// 							font-weight: bold;
+// 							font-size: 2rem;
+// 							color: @primarycolor;
+// 						}
+// 				}
+// 		}
+// 	}
+// }
