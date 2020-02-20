@@ -134,6 +134,9 @@ html,
 body {
   height: 100%;
 }
+.back-color-mixin {
+  background-color: black;
+}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -171,6 +174,8 @@ body {
   border: 2px solid;
   border-radius: 5px;
   font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
 .main-container header .header-img {
   width: 98%;
@@ -185,7 +190,7 @@ body {
   object-fit: cover;
   height: 10rem;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .main-container header .header-img img {
     width: 50%;
   }
